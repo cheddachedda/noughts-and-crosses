@@ -27,9 +27,11 @@ header > h1 {
   background-color: #161B22;
   border: 1px solid #C9D1D9;
   border-radius: 0.4em;
-  height: 8em;
+  font-size: 4em;
+  height: 2.5em;
   margin: 4px;
-  width: 8em;
+  text-align: center;
+  width: 2.5em;
 }
 
 .cell:active {
