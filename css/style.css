@@ -9,11 +9,8 @@ body {
   justify-content: center;
 }
 
-header {
-  padding: 24px;
-}
-
 header > h1 {
+  font-size: 4vh;
   text-align: center;
 }
 
@@ -23,17 +20,19 @@ header > h1 {
 }
 
 .cell {
+  align-items: center;
   background-color: #161B22;
-  border: 1px solid #C9D1D9;
+  border: 0.025em solid #C9D1D9;
   border-radius: 0.4em;
-  font-size: 4em;
+  display: flex;
+  font-size: 10vh;
   height: 2.5em;
-  margin: 4px;
-  text-align: center;
+  justify-content: center;
+  margin: 0.1em;
   width: 2.5em;
 }
 
 .cell:active {
   background-color: #8A949E;
-  border: 1px solid #8A949E;
+  border: 0.025em solid #8A949E;
 }
