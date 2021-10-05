@@ -11,16 +11,31 @@ const renderBoard = function () {
   }
 };
 
+const handleClickCell = function (cell) {
+  BACKEND.play(cell);
+  renderBoard();
+  if (BACKEND.result) showModal();
+}
+
+const showModal = function () {
+  $('.modal').text(BACKEND.result);
+  $('.modal').css('display', 'block');
+};
+
+const closeModal = function () {
+  BACKEND.reset();
+  $('.modal').css('display', 'none');
+  $('.modal').text('');
+  renderBoard();
+}
+
 $(document).ready(function () {
   $('.cell').on('click', function () {
     const id = Number($(this)[0].id);
-    BACKEND.play(id);
-    renderBoard();
+    handleClickCell(id);
   });
 
   $('#close-modal').on('click', function () {
-    $('.modal').css('display', 'none');
-    BACKEND.reset();
-    renderBoard();
+    closeModal();
   })
 });

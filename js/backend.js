@@ -16,16 +16,17 @@ const BACKEND = {
     this.board[move] = this.currentPlayer;      // Adds the move to the game board
     this.moves[this.currentPlayer].push(move);  // Adds the move to the player's list of moves
 
-    if (this.checkForWin()) {                                   //  if player won,
-      this.winner = this.currentPlayer;                         //    assign a winner
+    // Assigns a winner or draw if there is a result, else changes the current player.
+    if (this.checkForWin()) {
+      this.result = this.currentPlayer;
     } else if (this.moves[1].length + this.moves[2].length === 9) {
-      this.winner = 'Draw';
-    } else {                                                    //  else
-      this.currentPlayer += this.currentPlayer === 1 ? 1 : -1;  //    change the current player
+      this.result = 'Draw';
+    } else {
+      this.currentPlayer += this.currentPlayer === 1 ? 1 : -1;
     }
   },
 
-  winner: null,
+  result: null,
 
   winningCombos: [
     [0,1,2], [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]
@@ -44,7 +45,7 @@ const BACKEND = {
     this.board = [ '', '', '', '', '', '', '', '', '' ];
     this.moves = { 1: [], 2: [] };
     this.currentPlayer = 1;
-    this.winner = null;
+    this.result = null;
   },
 
   // ONLY FOR TESTING
