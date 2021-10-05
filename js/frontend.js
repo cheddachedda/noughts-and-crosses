@@ -18,14 +18,14 @@ const handleClickCell = function (cell) {
 }
 
 const showModal = function () {
-  $('.modal').text(BACKEND.result);
+  $('.modal-text').text(BACKEND.result);
   $('.modal').css('display', 'block');
 };
 
 const closeModal = function () {
   BACKEND.reset();
   $('.modal').css('display', 'none');
-  $('.modal').text('');
+  $('.modal-text').text('');
   renderBoard();
 }
 
