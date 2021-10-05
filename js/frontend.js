@@ -18,10 +18,6 @@ $(document).ready(function () {
     renderBoard();
   });
 
-  $('#open-modal').on('click', function () {
-    $('.modal').css('display', 'block');
-  })
-
   $('#close-modal').on('click', function () {
     $('.modal').css('display', 'none');
     BACKEND.reset();
