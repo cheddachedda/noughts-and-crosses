@@ -18,7 +18,8 @@ const BACKEND = {
 
     if (this.checkForWin()) {                                   //  if player won,
       this.winner = this.currentPlayer;                         //    assign a winner
-      $('.modal').css('display', 'block');
+    } else if (this.moves[1].length + this.moves[2].length === 9) {
+      this.winner = 'Draw';
     } else {                                                    //  else
       this.currentPlayer += this.currentPlayer === 1 ? 1 : -1;  //    change the current player
     }

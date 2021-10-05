@@ -21,7 +21,6 @@ $(document).ready(function () {
   $('#close-modal').on('click', function () {
     $('.modal').css('display', 'none');
     BACKEND.reset();
-    console.log(BACKEND);
     renderBoard();
   })
 });
