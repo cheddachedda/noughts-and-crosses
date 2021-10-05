@@ -18,6 +18,7 @@ const BACKEND = {
 
     if (this.checkForWin()) {                                   //  if player won,
       this.winner = this.currentPlayer;                         //    assign a winner
+      $('.modal').css('display', 'block');
     } else {                                                    //  else
       this.currentPlayer += this.currentPlayer === 1 ? 1 : -1;  //    change the current player
     }
@@ -36,6 +37,13 @@ const BACKEND = {
       if (won) return true;
     }
     return false;
+  },
+
+  reset: function () {
+    this.board = [ '', '', '', '', '', '', '', '', '' ];
+    this.moves = { 1: [], 2: [] };
+    this.currentPlayer = 1;
+    this.winner = null;
   },
 
   // ONLY FOR TESTING

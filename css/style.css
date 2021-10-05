@@ -36,3 +36,19 @@ header > h1 {
   background-color: #8A949E;
   border: 0.025em solid #8A949E;
 }
+
+.modal {
+  background-color: rgba(13,17,22,0.4);
+  display: none;
+  height: 100%;
+  overflow: auto;
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+}
+
+.modal-content {
+  background-color: white;
+  color: #0D1116;
+  display: flex;
+}
