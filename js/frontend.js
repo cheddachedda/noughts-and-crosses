@@ -1,10 +1,12 @@
 const RENDER = {
   render: function () {
+    this.renderScoreboard();
     this.renderBoard();
   },
 
   renderScoreboard: function () {
-
+    $('#player1-wins').text(GAME.players[1].wins);
+    $('#player2-wins').text(GAME.players[2].wins);
   },
 
   renderBoard: function () {
