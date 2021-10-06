@@ -1,0 +1,28 @@
+.scoreboard {
+  display: flex;
+  justify-content: space-around;
+}
+
+.player-button {
+  background-color: #21262D;
+  /* border: none; */
+  font-size: 100%;
+  color: #C9D1D9;
+  padding: 1em;
+  width: 30%;
+}
+
+.player-button-content {
+  display: flex;
+  padding: 0 1em;
+}
+
+.player-token {
+  flex: 1;
+  text-align: left;
+}
+
+.player-wins {
+  flex: 1;
+  text-align: right;
+}
