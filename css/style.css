@@ -8,10 +8,4 @@ body {
   font-family: Nunito Sans, sans-serif;
   justify-content: center;
   margin: 0 auto;
-  max-width: 480px;
-}
-
-header > h1 {
-  font-size: 5vh;
-  text-align: center;
 }

@@ -7,15 +7,16 @@
 .player-button {
   background-color: #21262D;
   /* border: none; */
-  font-size: 2vh;
+  border-radius: 0.5em;
+  font-size: 1.5vw;
   color: #C9D1D9;
-  padding: 1em;
+
   width: 30%;
 }
 
 .player-button-content {
   display: flex;
-  padding: 0 1em;
+  padding: 0.5em 1em;
 }
 
 .player-token {

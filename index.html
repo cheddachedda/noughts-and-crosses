@@ -8,8 +8,11 @@
   <meta name="author" content="Daniel Nguyen">
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/scoreboard.css">
+  <link rel="stylesheet" href="css/message.css">
   <link rel="stylesheet" href="css/board.css">
+  <link rel="stylesheet" href="css/reset.css">
   <!-- Scripts -->
   <script src="js/backend.js" charset="utf-8"></script>
   <script src="js/jquery.js" charset="utf-8"></script>
@@ -26,7 +29,6 @@
     <main>
 
       <div class="scoreboard">
-
         <button class="player-button" id="player1-button">
           <div class="player-button-content">
             <div class="player-token" id="player1-token">X</div>
@@ -40,10 +42,9 @@
             <div class="player-wins" id="player2-wins">-</div>
           </div>
         </button>
-
       </div>
 
-      <div class="dashboard"></div>
+      <div class="message">Start game or select player</div>
 
       <div class="board">
         <div class="row">
@@ -62,6 +63,9 @@
           <div class="cell" id="8"></div>
         </div>
       </div>
+
+      <button class="reset-button">Reset game</button>
+
     </main>
 
   </div>
