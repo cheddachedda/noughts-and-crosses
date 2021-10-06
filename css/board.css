@@ -4,10 +4,10 @@
 
 .cell {
   align-items: center;
-  background-color: #C9D1D9;
+  background-color: #161B22;
   border: 0.05em solid #C9D1D9;
   border-radius: 0.4em;
-  color: #0D1116;
+  color: #C9D1D9;
   display: flex;
   font-size: 3vw;
   justify-content: center;
@@ -16,19 +16,29 @@
   width: 3em;
 }
 
-.empty {
-  background-color: #161B22;
-  color: #C9D1D9;
-}
-
-.empty:hover {
+.cell:hover {
   border: 0.05em solid white;
 }
 
-.empty:active {
+.cell:active {
   background-color: #8A949E;
   border: 0.05em solid #8A949E;
+  margin: 0.2em;
+  height: 2.8em;
+  width: 2.8em;
+}
+
+.selected, .selected:hover, .selected:active {
+  background-color: #C9D1D9;
+  border: 0.05em solid #C9D1D9;
+  color: #0D1116;
   margin: 0.15em;
   height: 2.9em;
   width: 2.9em;
+}
+
+.winning-cell, .winning-cell:hover {
+  background-color: #59A6FF;
+  border: 0.05em solid #59A6FF;
+  color: white;
 }
