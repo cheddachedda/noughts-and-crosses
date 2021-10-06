@@ -1,27 +1,47 @@
-const render = function () {
-  for (let i = 0; i < GAME.board.length; i++) {
-    const cell = $(`#${i}`)
-    if (GAME.board[i] === 1) {
-      cell.text('X');
-    } else if (GAME.board[i] === 2) {
-      cell.text('O');
-    } else {
-      cell.text('');
+const RENDER = {
+  render: function () {
+    this.renderBoard();
+  },
+
+  renderScoreboard: function () {
+
+  },
+
+  renderBoard: function () {
+    for (let i = 0; i < GAME.board.length; i++) {
+      const $cell = $(`#${i}`);
+      if (GAME.board[i]) {
+        const player = GAME.board[i];
+        const token = GAME.players[player].token;
+        $cell.text(token);
+        $cell.removeClass('empty');
+      } else {
+        $cell.text('');
+        $cell.addClass('empty');
+      }
     }
-  }
+  },
 };
 
-const handleClickCell = function (cell) {
-  GAME.play(cell);
-  render();
-  if (GAME.result) showModal();
+const HANDLERS = {
+  clickCell: function (cell) {
+    GAME.play(cell);
+    RENDER.render();
+  },
+
+  reset: function () {
+    GAME.reset();
+    RENDER.render();
+  }
 }
 
 $(document).ready(function () {
-  render();
-
   $('.cell').on('click', function () {
     const id = Number($(this)[0].id);
-    handleClickCell(id);
+    HANDLERS.clickCell(id);
   });
+
+  $('#reset-button').on('click', function () {
+    HANDLERS.reset();
+  })
 });
