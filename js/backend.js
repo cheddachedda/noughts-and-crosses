@@ -26,20 +26,23 @@ const GAME = {
   currentPlayer: 1,   // either 1 or 2
 
   play: function ( cell ) {
-    const p = this.currentPlayer;
-    // Adds the move to the game board
-    this.board[cell] = p;
-    // Adds the move to the player's list of moves
-    this.players[p].moves.push(cell);
+    // Won't continue if the cell is already taken
+    if (this.board[cell] === '') {
+      const p = this.currentPlayer;
+      // Adds the move to the game board
+      this.board[cell] = p;
+      // Adds the move to the player's list of moves
+      this.players[p].moves.push(cell);
 
-    // Assigns a winner or draw if there is a result, else changes the current player.
-    if (this.checkForWin()) {
-      this.result = this.currentPlayer;
-      this.players[this.currentPlayer].wins++;
-    } else if (this.players[1].moves.length + this.players[2].moves.length === 9) {
-      this.result = 0;
-    } else {
-      this.currentPlayer += this.currentPlayer === 1 ? 1 : -1;
+      // Assigns a winner or draw if there is a result, else changes the current player.
+      if (this.checkForWin()) {
+        this.result = this.currentPlayer;
+        this.players[this.currentPlayer].wins++;
+      } else if (this.players[1].moves.length + this.players[2].moves.length === 9) {
+        this.result = 0;
+      } else {
+        this.currentPlayer += this.currentPlayer === 1 ? 1 : -1;
+      }
     }
   },
 
