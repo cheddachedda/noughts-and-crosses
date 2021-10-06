@@ -1,6 +1,5 @@
-.board {
+.row {
   display: flex;
-  justify-content: center;
 }
 
 .cell {
