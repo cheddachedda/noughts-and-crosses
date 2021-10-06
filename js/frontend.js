@@ -6,8 +6,20 @@ const RENDER = {
   },
 
   renderScoreboard: function () {
-    $('#player1-wins').text(GAME.players[1].wins);
-    $('#player2-wins').text(GAME.players[2].wins);
+    // Set active token
+    if (GAME.currentPlayer === 1) {
+      $('#player1-button').addClass('active');
+      $('#player2-button').removeClass('active');
+    } else if (GAME.currentPlayer === 2) {
+      $('#player2-button').addClass('active');
+      $('#player1-button').removeClass('active');
+    }
+
+    // Only re-render on game over.
+    if (GAME.result) {
+      $('#player1-wins').text(GAME.players[1].wins);
+      $('#player2-wins').text(GAME.players[2].wins);
+    }
   },
 
   renderMessage: function () {

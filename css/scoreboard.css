@@ -14,6 +14,11 @@
   width: 30%;
 }
 
+.active {
+  background-color: #59A6FF;
+  color: white;
+}
+
 .player-button-content {
   display: flex;
   padding: 0.5em 1em;
