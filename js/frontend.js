@@ -1,12 +1,25 @@
 const RENDER = {
   render: function () {
     this.renderScoreboard();
+    this.renderMessage();
     this.renderBoard();
   },
 
   renderScoreboard: function () {
     $('#player1-wins').text(GAME.players[1].wins);
     $('#player2-wins').text(GAME.players[2].wins);
+  },
+
+  renderMessage: function () {
+    const $message = $('.message');
+    const player1 = GAME.players[1].token;
+    const player2 = GAME.players[2].token;
+
+    if (GAME.result !== null) {
+      $message.text('Game Over');
+    } else {
+      $message.text(GAME.players[GAME.currentPlayer].token + '\'s Turn');
+    }
   },
 
   renderBoard: function () {
