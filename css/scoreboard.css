@@ -1,12 +1,13 @@
 .scoreboard {
   display: flex;
   justify-content: space-around;
+  margin: 1em 0;
 }
 
 .player-button {
   background-color: #21262D;
   /* border: none; */
-  font-size: 100%;
+  font-size: 2vh;
   color: #C9D1D9;
   padding: 1em;
   width: 30%;

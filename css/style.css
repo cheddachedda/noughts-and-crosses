@@ -7,6 +7,8 @@ body {
   display: flex;
   font-family: Nunito Sans, sans-serif;
   justify-content: center;
+  margin: 0 auto;
+  max-width: 480px;
 }
 
 header > h1 {
@@ -14,30 +16,7 @@ header > h1 {
   text-align: center;
 }
 
-.row {
-  display: flex;
-  justify-content: center;
-}
-
-.cell {
-  align-items: center;
-  background-color: #161B22;
-  border: 0.025em solid #C9D1D9;
-  border-radius: 0.4em;
-  display: flex;
-  font-size: 10vh;
-  height: 2.5em;
-  justify-content: center;
-  margin: 0.1em;
-  width: 2.5em;
-}
-
-.cell:active {
-  background-color: #8A949E;
-  border: 0.025em solid #8A949E;
-}
-
-.modal {
+/* .modal {
   background-color: rgba(13,17,22,0.4);
   display: none;
   height: 100%;
@@ -51,4 +30,7 @@ header > h1 {
   background-color: white;
   color: #0D1116;
   display: flex;
-}
+  justify-content: center;
+  height: 30%;
+  width: 40%;
+} */
