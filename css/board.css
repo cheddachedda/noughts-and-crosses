@@ -4,9 +4,10 @@
 
 .cell {
   align-items: center;
-  background-color: #161B22;
+  background-color: #C9D1D9;
   border: 0.05em solid #C9D1D9;
   border-radius: 0.4em;
+  color: #0D1116;
   display: flex;
   font-size: 3vw;
   justify-content: center;
@@ -15,11 +16,16 @@
   width: 3em;
 }
 
-.cell:hover {
+.empty {
+  background-color: #161B22;
+  color: #C9D1D9;
+}
+
+.empty:hover {
   border: 0.05em solid white;
 }
 
-.cell:active {
+.empty:active {
   background-color: #8A949E;
   border: 0.05em solid #8A949E;
   margin: 0.15em;
