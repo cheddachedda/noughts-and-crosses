@@ -1,0 +1,28 @@
+.board {
+  display: flex;
+  justify-content: center;
+}
+
+.cell {
+  align-items: center;
+  background-color: #161B22;
+  border: 0.05em solid #C9D1D9;
+  border-radius: 0.4em;
+  font-size: 4vw;
+  justify-content: center;
+  margin: 0.1em;
+  height: 3em;
+  width: 3em;
+}
+
+.cell:hover {
+  border: 0.05em solid white;
+}
+
+.cell:active {
+  background-color: #8A949E;
+  border: 0.05em solid #8A949E;
+  margin: 0.15em;
+  height: 2.9em;
+  width: 2.9em;
+}
