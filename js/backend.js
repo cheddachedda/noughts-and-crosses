@@ -27,7 +27,7 @@ const GAME = {
 
   play: function ( cell ) {
     // Won't continue if the cell is already taken
-    if (this.board[cell] === '') {
+    if (!this.result && this.board[cell] === '') {
       const p = this.currentPlayer;
       // Adds the move to the game board
       this.board[cell] = p;
