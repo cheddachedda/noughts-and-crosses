@@ -52,3 +52,27 @@ Underscores __also__ works.
 ## Links
 
 Here is the [W3C](http://w3c.org/) site.
+(Use this in your README file to link from the Github repo to your live demo on Github pages (.io site))
+
+## Images
+
+![Bill Murray](http://www.fillmurray.com/60/70)
+
+## Code
+
+Clojure uses `seq` a lot
+
+I might mention `console.log()`.
+
+### Multiline code
+
+```javascript
+const hey = function () {
+  console.log('wow');
+}
+```
+
+```ruby
+def hey
+  puts "wow"
+```
