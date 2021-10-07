@@ -1,7 +1,5 @@
 # Noughts and Crosses
 
-![screenshot](assets/screenshot.png)
-
 by Daniel Nguyen, October 2021
 
 Check it out the live version [here](https://the-daniel-nguyen.github.io/project0/)!
@@ -72,3 +70,8 @@ $(document).ready(function () {
 ## 🍻 Thanks
 
 Thanks to Joel, Rowena and Pat (the instructional team) for their quality Slack content, gifs and memes so far... and also the teaching, I guess.
+
+
+#### A screenshot
+
+![screenshot](assets/screenshot.png)
