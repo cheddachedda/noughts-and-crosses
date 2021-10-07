@@ -4,6 +4,8 @@ by Daniel Nguyen, October 2021
 
 Check it out the live version [here](https://the-daniel-nguyen.github.io/project0/)!
 
+![screenshot](assets/screenshot.png)
+
 ## 📖 Background
 
 This was my first project in General Assembly's Software Engineering Immersive, completed during Week 3 of the 12-week course. It took me four days to write.
@@ -70,8 +72,3 @@ $(document).ready(function () {
 ## 🍻 Thanks
 
 Thanks to Joel, Rowena and Pat (the instructional team) for their quality Slack content, gifs and memes so far... and also the teaching, I guess.
-
-
-#### A screenshot
-
-![screenshot](assets/screenshot.png)
