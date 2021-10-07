@@ -45,9 +45,6 @@ const RENDER = {
         const token = GAME.players[player].token;
         $cell.text(token);
         $cell.addClass('selected');
-      } else {
-        $cell.text('');
-        $cell.removeClass('selected');
       }
     }
   },
@@ -56,6 +53,15 @@ const RENDER = {
     const winningCombo = GAME.checkForWin();
     for (let cell of winningCombo) {
       $(`#${cell}`).addClass('winning-cell');
+    }
+  },
+
+  resetBoard: function () {
+    for (let i = 0; i < GAME.board.length; i++) {
+      const $cell = $(`#${i}`);
+      $cell.text('');
+      $cell.removeClass('selected');
+      $cell.removeClass('winning-cell');
     }
   }
 };
@@ -68,6 +74,7 @@ const HANDLERS = {
 
   reset: function () {
     GAME.reset();
+    RENDER.resetBoard();
     RENDER.render();
   },
 }
