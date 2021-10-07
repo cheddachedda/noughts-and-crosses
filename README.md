@@ -1,6 +1,6 @@
 # Noughts and Crosses
 
-![screenshot]()
+![screenshot](assets/screenshot.png)
 
 by Daniel Nguyen, October 2021
 
