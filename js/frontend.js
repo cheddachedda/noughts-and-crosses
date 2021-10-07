@@ -109,6 +109,15 @@ const HANDLERS = {
 
     this.clickReset();
   },
+
+  // TODO: Better Light/Dark mode styles
+  clickToggleUI: function () {
+    if ($('body').css('background-color') === 'rgb(13, 17, 22)') {
+      $('body').css('background-color', 'white');
+    } else {
+      $('body').css('background-color', '#0D1116');
+    }
+  }
 }
 
 $(document).ready(function () {
@@ -123,5 +132,9 @@ $(document).ready(function () {
 
   $('#choose-opponent-type').on('click', function () {
     HANDLERS.clickChangeOpponent();
-  })
+  });
+
+  $('#toggle-ui').on('click', function () {
+    HANDLERS.clickToggleUI();
+  });
 });
