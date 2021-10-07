@@ -87,8 +87,8 @@ const HANDLERS = {
 
     if (GAME.settings.opponentType === 'Computer') {
       GAME.computerPlay()
-      $('#blip-audio')[0].play();
       setTimeout(() => RENDER.render(), 1000);
+      $('#blip-audio')[0].play();
     }
   },
 
@@ -96,6 +96,18 @@ const HANDLERS = {
     GAME.reset();
     RENDER.resetBoard();
     RENDER.render();
+  },
+
+  clickChangeOpponent: function () {
+    if (GAME.settings.opponentType === 'Friend') {
+      GAME.settings.opponentType = 'Computer';
+      $('#choose-opponent-type').text('vs Computer');
+    } else if (GAME.settings.opponentType === 'Computer') {
+      GAME.settings.opponentType = 'Friend';
+      $('#choose-opponent-type').text('vs Friend');
+    }
+
+    this.clickReset();
   },
 }
 
@@ -108,4 +120,8 @@ $(document).ready(function () {
   $('#reset-button').on('click', function () {
     HANDLERS.clickReset();
   });
+
+  $('#choose-opponent-type').on('click', function () {
+    HANDLERS.clickChangeOpponent();
+  })
 });

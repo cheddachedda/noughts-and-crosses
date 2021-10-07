@@ -12,6 +12,7 @@
   border: 0.05em solid #C9D1D9;
   border-radius: 0.4em;
   color: #C9D1D9;
+  cursor: pointer;
   display: flex;
   font-size: 4vh;
   justify-content: center;
@@ -36,6 +37,7 @@
   background-color: #C9D1D9;
   border: 0.05em solid #C9D1D9;
   color: #0D1116;
+  cursor: default;
   margin: 0.15em;
   height: 2.9em;
   width: 2.9em;

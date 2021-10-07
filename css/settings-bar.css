@@ -1,0 +1,21 @@
+.settings-bar {
+  display: flex;
+  justify-content: space-around;
+}
+
+.settings-button {
+  background-color: #161B22;
+  border: 1px solid #C9D1D9;
+  border-radius: 0.5em;
+  color: #C9D1D9;
+  cursor: pointer;
+  font-family: Nunito Sans, sans-serif;
+  font-size: 1.5vh;
+  padding: 0.5em 1em;
+}
+
+.settings-button:hover, .settings-button:focus {
+  background-color: #59A6FF;
+  border: 1px solid #59A6FF;
+  color: white;
+}

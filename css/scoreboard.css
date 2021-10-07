@@ -10,7 +10,6 @@
   border-radius: 0.5em;
   font-size: 2vh;
   color: #C9D1D9;
-
   width: 30%;
 }
 
@@ -21,7 +20,7 @@
 
 .player-button-content {
   display: flex;
-  padding: 0.5em 1em;
+  padding: 0.5em;
 }
 
 .player-token {

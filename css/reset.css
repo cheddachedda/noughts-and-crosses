@@ -1,9 +1,10 @@
 #reset-button {
   background-color: #C9D1D9;
-  border-radius: 0.4em;
+  border-radius: 0.5em;
+  cursor: pointer;
   font-family: Nunito Sans, sans-serif;
   font-size: 2vh;
-  margin: 2em 0 0 0;
+  margin: 2em 0;
   padding: 0.5em;
   width: 100%;
 }
