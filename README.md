@@ -4,7 +4,7 @@ by Daniel Nguyen, October 2021
 
 Check it out the live version [here](https://the-daniel-nguyen.github.io/project0/)!
 
-![screenshot](assets/screenshot.png)
+![screenshot](assets/images/screenshot.png)
 
 ## 📖 Background
 
