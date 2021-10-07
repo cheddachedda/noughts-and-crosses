@@ -1,6 +1,8 @@
 #reset-button {
+  border-radius: 0.4em;
+  font-family: Nunito Sans, sans-serif;
   font-size: 1vw;
-  margin: 0.5em 0;
+  margin: 2em 0 0 0;
   padding: 0.5em;
   width: 100%;
 }
