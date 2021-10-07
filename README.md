@@ -1,78 +1,74 @@
-# Markdown Basics
+# Noughts and Crosses
 
-## Paragraphs
+![screenshot]()
 
-A few simple examples of Markdown.
+by Daniel Nguyen, October 2021
 
-Paragraphs require only new lines.
+Check it out the live version [here](https://the-daniel-nguyen.github.io/project0/)!
 
-So documents look good just by hitting Enter.
+## 📖 Background
 
-## Headings
+This was my first project in General Assembly's Software Engineering Immersive, completed during Week 3 of the 12-week course. It took me four days to write.
 
-### Subsubheadings
+It combines everything we'd learnt so far about HTML, CSS, JavaScript and jQuery.
 
-#### Subsubsubheadings
+## 🎯 Project Brief
 
-Also Use Equals h1
-==================
+We had to create our own [Tic Tac Toe](https://en.wikipedia.org/wiki/Tic-tac-toe) game. I called it "*Noughts and Crosses*" to unAmericanise it.
 
-Alternative Headings h2
------------------------
+See the full spec here: [Project-Brief.md](Project-Brief.md).
 
-## Blockquotes
+## 💡 Inspiration
 
-> To be or not to be
+I used [Google's version](https://g.co/kgs/ynZh3M) as the inspo for my game design.
 
-> ## Shakespeare
+(Their animations are better than mine 😢... for now!! )
 
-## Emphasis
+## 🛠 How I approached the task
 
-We can have **bold**
+Having readable code is very important to me, so I separated my JS code into [`backend.js`](js/backend.js) and [`frontend.js`](js/frontend.js) files. And even all my CSS files are separated by component.
 
-We can have *italic*
+No DOM manipulation occurs in the backend, which also allows for future scalability to different frontend frameworks!
 
-Can anyone guess what happens with 3? You get ***bold italic***
+#### Documentation snippet:
 
-Underscore _also_ works.
+Full documentation will come if I ever get around to it.
 
-Underscores __also__ works.
-
-## Lists
-
-* Groucho
-* Harpo
-* Chico
-
-### Numbered Lists
-1. Groucho
-2. Harpo
-3. Chico
-
-## Links
-
-Here is the [W3C](http://w3c.org/) site.
-(Use this in your README file to link from the Github repo to your live demo on Github pages (.io site))
-
-## Images
-
-![Bill Murray](http://www.fillmurray.com/60/70)
-
-## Code
-
-Clojure uses `seq` a lot
-
-I might mention `console.log()`.
-
-### Multiline code
-
-```javascript
-const hey = function () {
-  console.log('wow');
+`backend.js`:
+```JavaScript
+const GAME = {
+  // The backend database.
+  // Contains everything needed to play the game, even in the console!
+  // eg. board, settings, players, play(), result, reset()...
 }
 ```
 
-```ruby
-def hey
-  puts "wow"
+`frontend.js`:
+```JavaScript
+const RENDER = {
+  // Contains all the methods for rendering HTML via jQuery
+  // this.render() and this.resetBoard() call all the other RENDER methods
+};
+
+const HANDLERS = {
+  // These are the only methods in the whole program that interact with both backend.js and frontend.js
+  // These are called by methods in $(document).ready()
+};
+
+$(document).ready(function () {
+  // Contains all event listeners
+});
 ```
+
+## 🙏 Coming soon
+
+* Improved responsive design for mobile browsers 📱
+* Funner styling – *I really hate styling* 🤮
+* Customising player tokens
+* [**LocalStorage**](https://www.firebase.com/) to persist data locally to allow games to continue after page refresh or loss of internet connectivity
+* [**Google Firebase**](https://www.firebase.com/) for networked multiplayer
+* Playing against AI ( Easy, Medium and Impossible ). I think I need to read about [game trees](https://en.wikipedia.org/wiki/Game_tree)
+
+## 🍻 Thanks
+
+Thanks to Joel, Rowena and Pat (the instructional team) for their quality Slack content, gifs and memes so far... and also the teaching, I guess.
