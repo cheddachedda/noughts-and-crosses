@@ -7,7 +7,7 @@ const GAME = {
 
   settings: {
     boardSize: 3,
-    opponentType: 'Friend' // 'Easy', 'Medium', 'Impossible' or 'Friend'
+    opponentType: 'Friend' // 'Friend' or 'Computer'
   },
 
   players: {
@@ -28,24 +28,25 @@ const GAME = {
   play: function ( cell ) {
     // Won't continue if the cell is already taken
     if (!this.result && this.board[cell] === '') {
-      const p = this.currentPlayer;
-      // Adds the move to the game board
-      this.board[cell] = p;
-      // Adds the move to the player's list of moves
-      this.players[p].moves.push(cell);
-
-      // Assigns a winner or draw if there is a result, else changes the current player.
-      if (this.checkForWin()) {
-        this.result = this.currentPlayer;
-        this.players[this.currentPlayer].wins++;
-      } else if (this.players[1].moves.length + this.players[2].moves.length === 9) {
-        this.result = 0;
-      } else {
-        this.currentPlayer += this.currentPlayer === 1 ? 1 : -1;
-      }
+      this.board[cell] = this.currentPlayer;
+      this.players[this.currentPlayer].moves.push(cell);
+      this.endMove();
     }
   },
 
+  // Assigns a winner or draw if there is a result, else changes the current player.
+  endMove: function () {
+    if (this.checkForWin()) {
+      this.result = this.currentPlayer;
+      this.players[this.currentPlayer].wins++;
+    } else if (this.players[1].moves.length + this.players[2].moves.length === 9) {
+      this.result = 0;
+    } else {
+      this.currentPlayer += this.currentPlayer === 1 ? 1 : -1;
+    }
+  },
+
+  // Checks for a win after each move; returns the winning combo array or false.
   checkForWin: function () {
     const moves = this.players[this.currentPlayer].moves;
     for (let combo of this.winningCombos) {
