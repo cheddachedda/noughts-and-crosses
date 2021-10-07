@@ -30,8 +30,10 @@ const RENDER = {
     const player1 = GAME.players[1].token;
     const player2 = GAME.players[2].token;
 
-    if (GAME.result !== null) {
-      $message.text('Game Over');
+    if (GAME.result === 0) {
+      $message.text("It's a draw.");
+    } else if (GAME.result > 0) {
+      $message.text(`${GAME.players[GAME.result].token} won!`);
     } else {
       $message.text(GAME.players[GAME.currentPlayer].token + '\'s Turn');
     }
