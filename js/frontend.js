@@ -3,6 +3,9 @@ const RENDER = {
     this.renderScoreboard();
     this.renderMessage();
     this.renderBoard();
+    if (GAME.result > 0) {
+      this.renderWinningCombo();
+    }
   },
 
   renderScoreboard: function () {
@@ -41,13 +44,20 @@ const RENDER = {
         const player = GAME.board[i];
         const token = GAME.players[player].token;
         $cell.text(token);
-        $cell.removeClass('empty');
+        $cell.addClass('selected');
       } else {
         $cell.text('');
-        $cell.addClass('empty');
+        $cell.removeClass('selected');
       }
     }
   },
+
+  renderWinningCombo: function () {
+    const winningCombo = GAME.checkForWin();
+    for (let cell of winningCombo) {
+      $(`#${cell}`).addClass('winning-cell');
+    }
+  }
 };
 
 const HANDLERS = {
@@ -59,7 +69,7 @@ const HANDLERS = {
   reset: function () {
     GAME.reset();
     RENDER.render();
-  }
+  },
 }
 
 $(document).ready(function () {
@@ -70,5 +80,9 @@ $(document).ready(function () {
 
   $('#reset-button').on('click', function () {
     HANDLERS.reset();
+  });
+
+  $('#show-game-over').on('click', function () {
+    HANDLERS.winningComboAnimation();
   })
 });
