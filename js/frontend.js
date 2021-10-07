@@ -51,8 +51,13 @@ const RENDER = {
 
   renderWinningCombo: function () {
     const winningCombo = GAME.checkForWin();
-    for (let cell of winningCombo) {
-      $(`#${cell}`).addClass('winning-cell');
+
+    const applyStyle = function (cellID) {
+      $(`#${winningCombo[cellID]}`).addClass('winning-cell');
+    };
+
+    for (let i = 0; i < winningCombo.length; i++) {
+      setTimeout(() => applyStyle(i), (i+1)*200);
     }
   },
 
