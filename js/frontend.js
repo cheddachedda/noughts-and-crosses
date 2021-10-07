@@ -76,6 +76,13 @@ const RENDER = {
 const HANDLERS = {
   clickCell: function (cell) {
     GAME.play(cell);
+    if (GAME.result === 0) {
+      $('#draw-audio')[0].play();
+    } else if (GAME.result > 0) {
+      $('#win-audio')[0].play();
+    } else {
+      $('#blip-audio')[0].play();
+    }
     RENDER.render();
   },
 
