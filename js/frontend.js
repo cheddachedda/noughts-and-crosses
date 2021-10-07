@@ -84,9 +84,15 @@ const HANDLERS = {
       $('#blip-audio')[0].play();
     }
     RENDER.render();
+
+    if (GAME.settings.opponentType === 'Computer') {
+      GAME.computerPlay()
+      $('#blip-audio')[0].play();
+      setTimeout(() => RENDER.render(), 1000);
+    }
   },
 
-  reset: function () {
+  clickReset: function () {
     GAME.reset();
     RENDER.resetBoard();
     RENDER.render();
@@ -100,6 +106,6 @@ $(document).ready(function () {
   });
 
   $('#reset-button').on('click', function () {
-    HANDLERS.reset();
+    HANDLERS.clickReset();
   });
 });

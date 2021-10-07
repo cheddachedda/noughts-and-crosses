@@ -7,7 +7,7 @@ const GAME = {
 
   settings: {
     boardSize: 3,
-    opponentType: 'Friend' // 'Friend' or 'Computer'
+    opponentType: 'Computer' // 'Friend' or 'Computer'
   },
 
   players: {
@@ -36,12 +36,17 @@ const GAME = {
 
   // Assigns a winner or draw if there is a result, else changes the current player.
   endMove: function () {
+    // Win:
     if (this.checkForWin()) {
       this.result = this.currentPlayer;
       this.players[this.currentPlayer].wins++;
-    } else if (this.players[1].moves.length + this.players[2].moves.length === 9) {
+    }
+    // Draw:
+    else if (this.players[1].moves.length + this.players[2].moves.length === 9) {
       this.result = 0;
-    } else {
+    }
+    // Still playing:
+    else {
       this.currentPlayer += this.currentPlayer === 1 ? 1 : -1;
     }
   },
@@ -56,6 +61,22 @@ const GAME = {
       };
     }
     return false;
+  },
+
+  // Computer plays a random empty cell
+  computerPlay: function () {
+    // Creates an array of empty cellIDs
+    let emptyCells = [];
+    for (let i = 0; i < 9; i++) {
+      if (this.board[i] === '') {
+        emptyCells.push(i);
+      }
+    }
+
+    // Chooses a random cellID from emptyCells
+    const random = Math.floor(Math.random() * emptyCells.length);
+    const computerChoice = emptyCells[random];
+    this.play(computerChoice);
   },
 
   // TODO: Write a function that can get the winningCombos, based on board size.
