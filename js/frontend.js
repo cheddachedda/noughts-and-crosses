@@ -93,8 +93,4 @@ $(document).ready(function () {
   $('#reset-button').on('click', function () {
     HANDLERS.reset();
   });
-
-  $('#show-game-over').on('click', function () {
-    HANDLERS.winningComboAnimation();
-  })
 });
