@@ -30,7 +30,7 @@ Having readable code is very important to me, so I separated my JS code into [`b
 
 No DOM manipulation occurs in the backend, which also allows for future scalability to different frontend frameworks!
 
-#### Documentation snippet:
+#### Code overview:
 
 Full documentation will come if I ever get around to it.
 
