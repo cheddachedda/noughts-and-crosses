@@ -2,7 +2,7 @@
 
 by Daniel Nguyen, October 2021
 
-Check it out the live version [here](https://the-daniel-nguyen.github.io/project0/)!
+Check out the live version [here](https://the-daniel-nguyen.github.io/project0/)!
 
 ![screenshot](assets/images/screenshot.png)
 
@@ -22,7 +22,7 @@ See the full spec here: [Project-Brief.md](Project-Brief.md).
 
 I used [Google's version](https://g.co/kgs/ynZh3M) as the inspo for my game design.
 
-(Their animations are better than mine 😢... for now!! )
+(Their animations are better than mine 😢... for now!!)
 
 ## 🛠 How I approached the task
 
@@ -59,6 +59,12 @@ $(document).ready(function () {
   // Contains all event listeners
 });
 ```
+
+## 🪲 Bugs
+
+* Sound effects don't always play (*a problem with how they're loaded?*)
+* On game-over, user can still click on cells and trigger sounds
+* vs Computer, user can click before the computer's move has rendered
 
 ## 🙏 Coming soon
 
