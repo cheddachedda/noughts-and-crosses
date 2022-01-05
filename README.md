@@ -2,7 +2,7 @@
 
 by Daniel Nguyen, October 2021
 
-Check out the live version [here](https://the-daniel-nguyen.github.io/project0/)!
+Check out the live version [here](https://cheddachedda.github.io/noughts-and-crosses/)!
 
 ![screenshot](assets/images/screenshot.png)
 
